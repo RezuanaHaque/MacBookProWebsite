@@ -36,15 +36,17 @@
                     <!-- storage  -->
                     <div>
                         <p class="mt-3"><b>Storage</b></p>
-                        <button type="button" class="btn btn-dark">256GB SSD storage</button>
-                        <button type="button" class="btn btn-dark">512GB SSD storage</button>
-                        <button type="button" class="btn btn-dark">1TB SSD storage</button>
+                        <button id="storage256gb" type="button" class="btn btn-dark">256GB SSD storage</button>
+                        <button id="storage512gb" type="button" class="btn btn-dark">512GB SSD storage</button>
+                        <button id="storage1tb" type="button" class="btn btn-dark">1TB SSD storage</button>
                     </div>
                     <!-- deliver  -->
                     <div>
                         <p class="mt-3"><b>Choose your delivery option</b></p>
-                        <button type="button" class="btn btn-dark">Friday, Aug 25 FREE Prime Delivery</button>
-                        <button type="button" class="btn btn-dark">Friday, Aug 21 Delivery Charge $20</button>
+                        <button id="freedelivery" type="button" class="btn btn-dark">Friday, Aug 25 FREE Prime
+                            Delivery</button>
+                        <button id="deliverycharge" type="button" class="btn btn-dark">Friday, Aug 21 Delivery Charge
+                            $20</button>
                     </div>
                     <!-- payment -->
                     <section class="row row-cols-3 mt-5">
@@ -57,15 +59,15 @@
                         </div>
                         <div class="col">
 
-                            <p><b>$1299</b></p> <!-- best price  -->
+                            <p><b>$<span id="basicprice">1299</span></b></p> <!-- best price  -->
 
-                            <p><b>$<span>0</span></b></p> <!-- extra memory  -->
+                            <p><b>$<span id="extramem">0</span></b></p> <!-- extra memory  -->
 
-                            <p><b>$<span>0</span></b></p> <!-- extra storage  -->
+                            <p><b>$<span id="extrastorage">0</span></b></p> <!-- extra storage  -->
 
-                            <p><b>$<span>0</span></b></p> <!-- delivery charge  -->
+                            <p><b>$<span id="extradelivery">0</span></b></p> <!-- delivery charge  -->
 
-                            <p><b>$<span>1299</span></b></p> <!-- total  -->
+                            <p><b>$<span id="totalprice">1299</span></b></p> <!-- total  -->
                         </div>
                     </section>
                 </div>
@@ -78,7 +80,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
