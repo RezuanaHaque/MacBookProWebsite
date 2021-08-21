@@ -86,19 +86,21 @@ function calculatetotal() {
 // promo code application
 function promocode() {
     document.getElementById('promobtn').addEventListener('click', function () {
+        const promo = document.getElementById('promoInput');
         const promo_input = document.getElementById('promoInput').value;
         const promo_code = 'stevekaku';
         if (promo_input == promo_code) {
             const total_price_value = parseFloat(total_price.innerText);
             const discountmoney = total_price_value * .2;
             const discounted_price = total_price_value - discountmoney;
-
             promo_price.innerText = discounted_price;
             document.getElementById('invalidPromo').style.display = "none";
+            promo.value = '';
 
         }
         else {
             document.getElementById('invalidPromo').style.display = "block";
+            promo.value = '';
 
         }
     });
