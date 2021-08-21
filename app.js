@@ -1,8 +1,8 @@
-// for hiding the promo code invalid
+// for hiding the promo code invalid 
 document.getElementById('invalidPromo').style.display = "none";
 
-// for appling the promocode when no button is clicked. It means the promocode will be applicable for base price
-const total_price = document.getElementById('totalprice');
+/* for appling the promocode when no button is clicked. It means the promocode will be applicable for only all the initial va;ues of base price,base memory, base stoarage and free delivery */
+const total_price = document.getElementById('totalPrice');
 const promo_price = document.getElementById('promoPrice');
 promocode();
 
@@ -13,9 +13,9 @@ document.getElementById('mem8gb').addEventListener('click', function () {
 document.getElementById('mem16gb').addEventListener('click', function () {
     memoryextra(true);
 });
-function memoryextra(isextramemory) {
-    const extra_mem = document.getElementById('extramem');
-    if (isextramemory == false) {
+function memoryextra(isextraMemoryory) {
+    const extra_mem = document.getElementById('extraMemory');
+    if (isextraMemoryory == false) {
         extra_mem.innerText = 0;
     }
     else {
@@ -38,30 +38,30 @@ document.getElementById('storage1tb').addEventListener('click', function () {
 
 });
 
-function storageextra(isextrastorage) {
-    const extra_storage = document.getElementById('extrastorage');
-    if (isextrastorage == '256GB') {
+function storageextra(isextraStorage) {
+    const extra_storage = document.getElementById('extraStorage');
+    if (isextraStorage == '256GB') {
         extra_storage.innerText = 0;
     }
-    if (isextrastorage == '512GB') {
+    if (isextraStorage == '512GB') {
         extra_storage.innerText = 100;
     }
-    if (isextrastorage == '1TB') {
+    if (isextraStorage == '1TB') {
         extra_storage.innerText = 180;
     }
     calculatetotal();
 }
 
 // delivery charges
-document.getElementById('freedelivery').addEventListener('click', function () {
-    deliveryextra(false, 'extradelivery');
+document.getElementById('freeDelivery').addEventListener('click', function () {
+    deliveryextra(false, 'extraDelivery');
 });
-document.getElementById('deliverycharge').addEventListener('click', function () {
-    deliveryextra(true, 'extradelivery');
+document.getElementById('deliveryCharge').addEventListener('click', function () {
+    deliveryextra(true, 'extraDelivery');
 });
-function deliveryextra(isdeliverycharge, field) {
+function deliveryextra(isdeliveryCharge, field) {
     const delivery_charge = document.getElementById(field);
-    if (isdeliverycharge == false) {
+    if (isdeliveryCharge == false) {
         delivery_charge.innerText = 0;
     }
     else {
@@ -72,11 +72,11 @@ function deliveryextra(isdeliverycharge, field) {
 
 // total payment
 function calculatetotal() {
-    const base_price = document.getElementById('baseprice').innerText;
-    const extra_mem = document.getElementById('extramem').innerText;
-    const extra_storage = document.getElementById('extrastorage').innerText;
-    const delivery_charge = document.getElementById('extradelivery').innerText;
-    const total_price = document.getElementById('totalprice');
+    const base_price = document.getElementById('basePrice').innerText;
+    const extra_mem = document.getElementById('extraMemory').innerText;
+    const extra_storage = document.getElementById('extraStorage').innerText;
+    const delivery_charge = document.getElementById('extraDelivery').innerText;
+    const total_price = document.getElementById('totalPrice');
     total_price.innerText = parseFloat(base_price) + parseFloat(extra_mem) + parseFloat(extra_storage) + parseFloat(delivery_charge);
     const promo_price = document.getElementById('promoPrice');
     promo_price.innerText = total_price.innerText;
