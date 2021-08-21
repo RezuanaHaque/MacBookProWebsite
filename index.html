@@ -59,7 +59,7 @@
                         </div>
                         <div class="col">
 
-                            <p><b>$<span id="basicprice">1299</span></b></p> <!-- best price  -->
+                            <p><b>$<span id="baseprice">1299</span></b></p> <!-- best price  -->
 
                             <p><b>$<span id="extramem">0</span></b></p> <!-- extra memory  -->
 
@@ -70,10 +70,18 @@
                             <p><b>$<span id="totalprice">1299</span></b></p> <!-- total  -->
                         </div>
                     </section>
+                    <section class=" mt-4 mb-0 w-50">
+                        <p>Add Promo Code</p>
+                        <div class="d-flex">
+                            <input id="promoInput" type="email" class="form-control">
+                            <button id="promobtn" type="button" class="btn btn-danger">APPLY</button>
+                        </div>
+                        <p id="invalidPromo" class="text-danger"><b>Promo Code Invalid</b></p>
+                    </section>
                 </div>
             </div>
             <hr>
-            <h2 class="text-center">Total:$<span>1299</span></h2>
+            <h1 class="text-center">Total:$<span id="promoPrice">1299</span></h1>
         </section>
     </main>
     <!-- JS -->
